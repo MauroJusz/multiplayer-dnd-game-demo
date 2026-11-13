@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import './Lobby.css';
-import { socket } from '../../socket.ts';
+import { socket } from '../../socket.js';
 import type { Room } from "../../../../shared/interfaces"
 import { useNavigate } from 'react-router-dom';
 type LobbyProps = {
