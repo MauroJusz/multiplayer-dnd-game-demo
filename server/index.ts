@@ -189,7 +189,11 @@ app.post("/login", async (req, res) => {
 
 const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>(httpServer, {
     cors: {
-        origin: "*",
+        origin: [
+            "http://localhost:5173",
+            "https://multiplayer-dnd-game-demo.vercel.app",
+            "https://multiplayer-dnd-game-demo-fjfno281d-mauro-jusz.vercel.app"
+        ],
         methods: ["GET", "POST"],
         credentials: true
     }
